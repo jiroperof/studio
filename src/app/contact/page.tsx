@@ -31,8 +31,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="font-semibold">Teléfono</p>
-                  <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                    (123) 456-7890
+                  <a href="tel:+584123384661" className="text-muted-foreground hover:text-primary transition-colors">
+                    +58 412-3384661
                   </a>
                 </div>
               </div>
@@ -42,8 +42,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="font-semibold">Correo Electrónico</p>
-                  <a href="mailto:support@icarotech.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    support@icarotech.com
+                  <a href="mailto:contacto@icarotech.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    contacto@icarotech.com
                   </a>
                 </div>
               </div>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="font-semibold">Dirección</p>
-                  <p className="text-muted-foreground">123 Tech Avenue, Silicon Valley, CA 94000</p>
+                  <p className="text-muted-foreground">Los Ruices, Caracas, Venezuela</p>
                 </div>
               </div>
             </CardContent>
@@ -67,11 +67,11 @@ export default function ContactPage() {
                  <div className="aspect-video w-full overflow-hidden rounded-lg">
                     <Image
                         src="https://placehold.co/600x400.png"
-                        alt="Mapa a ICARO Technology"
+                        alt="Mapa a CC Los Ruices"
                         width={600}
                         height={400}
                         className="w-full h-full object-cover"
-                        data-ai-hint="map location"
+                        data-ai-hint="map los ruices"
                     />
                 </div>
             </CardContent>
