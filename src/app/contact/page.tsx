@@ -42,8 +42,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="font-semibold">Correo Electrónico</p>
-                  <a href="mailto:contacto@icarotech.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    contacto@icarotech.com
+                  <a href="mailto:grupoicaro24@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    grupoicaro24@gmail.com
                   </a>
                 </div>
               </div>
