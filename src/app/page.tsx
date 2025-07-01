@@ -61,20 +61,27 @@ const testimonials = [
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative w-full py-24 md:py-32 lg:py-40 bg-accent/20">
+      <section className="relative w-full py-24 md:py-32 lg:py-40 bg-primary">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto flex flex-col items-center">
+            <Image
+              src="/logo.png"
+              alt="ICARO Technology Logo"
+              width={144}
+              height={144}
+              className="mb-8"
+            />
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-primary-foreground font-headline">
               ICARO TECHNOLOGY
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground md:text-xl">
+            <p className="mt-4 text-lg text-primary-foreground/80 md:text-xl">
               Su Socio en Soluciones de TI Modernas. Confiable, Seguro y Eficiente.
             </p>
             <div className="mt-8 flex justify-center gap-4">
-              <Button asChild size="lg">
+              <Button asChild size="lg" variant="secondary">
                 <Link href="/quote">Obtener Cotización</Link>
               </Button>
-              <Button asChild size="lg" variant="secondary">
+              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 <Link href="/contact">Contáctenos</Link>
               </Button>
             </div>
