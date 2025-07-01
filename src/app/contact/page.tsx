@@ -4,7 +4,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import Image from 'next/image';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function ContactPage() {
@@ -65,14 +64,14 @@ export default function ContactPage() {
             </CardHeader>
             <CardContent>
                  <div className="aspect-video w-full overflow-hidden rounded-lg">
-                    <Image
-                        src="https://placehold.co/600x400.png"
-                        alt="Mapa a CC Los Ruices"
-                        width={600}
-                        height={400}
-                        className="w-full h-full object-cover"
-                        data-ai-hint="map los ruices"
-                    />
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.1012793155583!2d-66.8316360251847!3d10.492681864363824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a59644dba5d27%3A0xd0ca47d1acd082f8!2sCentro%20Comercial%20Los%20Ruices!5e0!3m2!1sen!2sve!4v1751383996930!5m2!1sen!2sve"
+                        style={{ border: 0 }} 
+                        allowFullScreen={true}
+                        loading="lazy" 
+                        referrerPolicy="no-referrer-when-downgrade"
+                        className="w-full h-full">
+                    </iframe>
                 </div>
             </CardContent>
           </Card>
