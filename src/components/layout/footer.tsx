@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container mx-auto max-w-7xl px-4 py-8 md:px-6">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="ICARO Technology Logo" width={28} height={28} className="h-7 w-7" />
+            <Image src="/logo.png" alt="ICARO Technology Logo" width={32} height={32} className="h-8 w-8" />
             <span className="font-bold text-lg font-headline">ICARO TECHNOLOGY</span>
           </div>
           <p className="text-sm text-center md:text-left">
