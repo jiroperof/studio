@@ -8,6 +8,7 @@ import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import { WhatsAppIcon } from '@/components/icons/whatsapp';
 
 const navLinks = [
   { href: '/', label: 'Inicio' },
@@ -39,6 +40,11 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <Button asChild variant="ghost" size="icon">
+            <Link href="https://w.app/5yzvmg" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <WhatsAppIcon className="h-6 w-6 text-green-600" />
+            </Link>
+          </Button>
         </nav>
         <div className="md:hidden">
           <Sheet>
@@ -64,6 +70,17 @@ export function Header() {
                     </Link>
                    </SheetTrigger>
                 ))}
+                 <SheetTrigger asChild>
+                    <Link
+                        href="https://w.app/5yzvmg"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-lg font-medium transition-colors hover:text-primary"
+                    >
+                        <WhatsAppIcon className="h-6 w-6 text-green-600" />
+                        WhatsApp
+                    </Link>
+                </SheetTrigger>
               </div>
             </SheetContent>
           </Sheet>
