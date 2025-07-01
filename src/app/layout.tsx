@@ -6,8 +6,8 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 
 export const metadata: Metadata = {
-  title: 'ICARO Tech Solutions',
-  description: 'Providing expert IT services in networking, computing, CCTV, and alarm systems.',
+  title: 'ICARO Soluciones Tecnológicas',
+  description: 'Ofrecemos servicios expertos de TI en redes, computación, CCTV y sistemas de alarma.',
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

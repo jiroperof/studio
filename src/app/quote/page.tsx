@@ -20,17 +20,23 @@ function SubmitButton() {
       {pending ? (
         <>
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Estimating...
+          Estimando...
         </>
       ) : (
         <>
           <Wand2 className="mr-2 h-4 w-4" />
-          Get AI Estimate
+          Obtener Estimación con IA
         </>
       )}
     </Button>
   );
 }
+
+const confidenceLevelMap: { [key: string]: string } = {
+    High: 'Alto',
+    Medium: 'Medio',
+    Low: 'Bajo',
+};
 
 export default function QuotePage() {
   const initialState: QuoteState = {};
@@ -50,9 +56,9 @@ export default function QuotePage() {
   return (
     <div className="container mx-auto max-w-3xl px-4 py-12 md:py-20">
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold tracking-tight font-headline">Request a Quote</h1>
+        <h1 className="text-4xl font-bold tracking-tight font-headline">Solicitar una Cotización</h1>
         <p className="mt-3 text-lg text-muted-foreground">
-          Describe your IT needs, and our AI will provide an instant price estimate.
+          Describa sus necesidades de TI y nuestra IA le proporcionará una estimación de precio instantánea.
         </p>
       </div>
 
@@ -60,11 +66,11 @@ export default function QuotePage() {
         <form action={formAction}>
           <CardContent className="p-6 space-y-4">
             <div className="grid w-full gap-1.5">
-              <Label htmlFor="serviceRequest">Service Request</Label>
+              <Label htmlFor="serviceRequest">Solicitud de Servicio</Label>
               <Textarea
                 id="serviceRequest"
                 name="serviceRequest"
-                placeholder="Describe your project in detail. For example: 'I need to set up a secure network for a 10-person office, including Wi-Fi, a firewall, and a file server. We also need 4 CCTV cameras installed at the entrances.'"
+                placeholder="Describa su proyecto en detalle. Por ejemplo: 'Necesito configurar una red segura para una oficina de 10 personas, incluyendo Wi-Fi, un firewall y un servidor de archivos. También necesitamos 4 cámaras de CCTV instaladas en las entradas.'"
                 rows={8}
                 defaultValue={state.submittedRequest}
                 aria-describedby="serviceRequest-error"
@@ -77,7 +83,7 @@ export default function QuotePage() {
               )}
             </div>
             <p className="text-xs text-muted-foreground">
-              The more detail you provide, the more accurate the estimate will be. This is a preliminary estimate and is subject to change after a detailed review.
+              Cuanto más detalle proporcione, más precisa será la estimación. Esta es una estimación preliminar y está sujeta a cambios después de una revisión detallada.
             </p>
           </CardContent>
           <CardFooter>
@@ -92,26 +98,26 @@ export default function QuotePage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Wand2 />
-                Your AI-Powered Estimate
+                Su Estimación Impulsada por IA
               </CardTitle>
               <CardDescription>
-                Based on your request, here is our preliminary estimate.
+                Basado en su solicitud, aquí está nuestra estimación preliminar.
               </CardDescription>
             </CardHeader>
             <CardContent className="grid gap-4 sm:grid-cols-2">
               <div className="space-y-1">
-                <p className="text-sm font-medium text-muted-foreground">Estimated Price Range</p>
+                <p className="text-sm font-medium text-muted-foreground">Rango de Precio Estimado</p>
                 <p className="text-2xl font-bold">{state.result.priceRange}</p>
               </div>
               <div className="space-y-1">
-                <p className="text-sm font-medium text-muted-foreground">Confidence Level</p>
+                <p className="text-sm font-medium text-muted-foreground">Nivel de Confianza</p>
                 <Badge variant={state.result.confidenceLevel === 'High' ? 'default' : (state.result.confidenceLevel === 'Medium' ? 'secondary' : 'destructive')}>
-                  {state.result.confidenceLevel}
+                  {confidenceLevelMap[state.result.confidenceLevel] || state.result.confidenceLevel}
                 </Badge>
               </div>
             </CardContent>
             <CardFooter>
-               <p className="text-xs text-muted-foreground">A team member will contact you shortly to provide a formal quote.</p>
+               <p className="text-xs text-muted-foreground">Un miembro del equipo se comunicará con usted en breve para proporcionarle una cotización formal.</p>
             </CardFooter>
           </Card>
         </div>
@@ -120,7 +126,7 @@ export default function QuotePage() {
       {state.error && !state.validationErrors && (
          <Alert variant="destructive" className="mt-8">
             <AlertCircle className="h-4 w-4" />
-            <AlertTitle>Estimation Failed</AlertTitle>
+            <AlertTitle>La Estimación Falló</AlertTitle>
             <AlertDescription>{state.error}</AlertDescription>
          </Alert>
       )}

@@ -8,7 +8,7 @@ import {
 } from '@/ai/flows/estimate-price-range';
 
 const QuoteSchema = z.object({
-  serviceRequest: z.string().min(20, { message: 'Please provide a more detailed description of your needs (at least 20 characters).' }),
+  serviceRequest: z.string().min(20, { message: 'Por favor, proporcione una descripción más detallada de sus necesidades (al menos 20 caracteres).' }),
 });
 
 export type QuoteState = {
@@ -32,7 +32,7 @@ export async function getQuote(
 
   if (!validatedFields.success) {
     return {
-      error: 'Validation failed.',
+      error: 'La validación falló.',
       validationErrors: validatedFields.error.flatten().fieldErrors,
       submittedRequest: serviceRequest,
     };
@@ -43,7 +43,7 @@ export async function getQuote(
     return { result, submittedRequest: serviceRequest };
   } catch (e) {
     console.error(e);
-    const errorMessage = e instanceof Error ? e.message : 'An unexpected error occurred.';
-    return { error: `AI estimation failed: ${errorMessage}`, submittedRequest: serviceRequest };
+    const errorMessage = e instanceof Error ? e.message : 'Ocurrió un error inesperado.';
+    return { error: `La estimación de la IA falló: ${errorMessage}`, submittedRequest: serviceRequest };
   }
 }

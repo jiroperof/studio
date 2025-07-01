@@ -11,9 +11,9 @@ export default function ContactPage() {
   return (
     <div className="container mx-auto max-w-5xl px-4 py-12 md:py-20">
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold tracking-tight font-headline">Contact Us</h1>
+        <h1 className="text-4xl font-bold tracking-tight font-headline">Contáctenos</h1>
         <p className="mt-3 text-lg text-muted-foreground">
-          We're here to help. Reach out to us with any questions or for support.
+          Estamos aquí para ayudar. Contáctenos si tiene alguna pregunta o necesita soporte.
         </p>
       </div>
 
@@ -21,8 +21,8 @@ export default function ContactPage() {
         <div className="space-y-8">
           <Card>
             <CardHeader>
-              <CardTitle>Contact Information</CardTitle>
-              <CardDescription>Find us here and drop a line.</CardDescription>
+              <CardTitle>Información de Contacto</CardTitle>
+              <CardDescription>Encuéntrenos aquí y escríbanos.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center gap-4">
@@ -30,7 +30,7 @@ export default function ContactPage() {
                   <Phone className="h-6 w-6 text-accent-foreground" />
                 </div>
                 <div>
-                  <p className="font-semibold">Phone</p>
+                  <p className="font-semibold">Teléfono</p>
                   <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
                     (123) 456-7890
                   </a>
@@ -41,7 +41,7 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 text-accent-foreground" />
                 </div>
                 <div>
-                  <p className="font-semibold">Email</p>
+                  <p className="font-semibold">Correo Electrónico</p>
                   <a href="mailto:support@icarotech.com" className="text-muted-foreground hover:text-primary transition-colors">
                     support@icarotech.com
                   </a>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                   <MapPin className="h-6 w-6 text-accent-foreground" />
                 </div>
                 <div>
-                  <p className="font-semibold">Address</p>
+                  <p className="font-semibold">Dirección</p>
                   <p className="text-muted-foreground">123 Tech Avenue, Silicon Valley, CA 94000</p>
                 </div>
               </div>
@@ -61,13 +61,13 @@ export default function ContactPage() {
           
           <Card>
             <CardHeader>
-                <CardTitle>Our Location</CardTitle>
+                <CardTitle>Nuestra Ubicación</CardTitle>
             </CardHeader>
             <CardContent>
                  <div className="aspect-video w-full overflow-hidden rounded-lg">
                     <Image
                         src="https://placehold.co/600x400.png"
-                        alt="Map to ICARO Technology"
+                        alt="Mapa a ICARO Technology"
                         width={600}
                         height={400}
                         className="w-full h-full object-cover"
@@ -81,24 +81,24 @@ export default function ContactPage() {
         <div>
           <Card>
             <CardHeader>
-              <CardTitle>Send us a Message</CardTitle>
-              <CardDescription>Fill out the form below and we'll get back to you.</CardDescription>
+              <CardTitle>Envíenos un Mensaje</CardTitle>
+              <CardDescription>Complete el formulario a continuación y nos pondremos en contacto con usted.</CardDescription>
             </CardHeader>
             <CardContent>
               <form className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" placeholder="Your Name" />
+                  <Label htmlFor="name">Nombre</Label>
+                  <Input id="name" placeholder="Su Nombre" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="your.email@example.com" />
+                  <Label htmlFor="email">Correo Electrónico</Label>
+                  <Input id="email" type="email" placeholder="su.email@example.com" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" placeholder="How can we help you?" rows={5} />
+                  <Label htmlFor="message">Mensaje</Label>
+                  <Textarea id="message" placeholder="¿Cómo podemos ayudarle?" rows={5} />
                 </div>
-                <Button type="submit" className="w-full">Send Message</Button>
+                <Button type="submit" className="w-full">Enviar Mensaje</Button>
               </form>
             </CardContent>
           </Card>

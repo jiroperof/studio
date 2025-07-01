@@ -9,10 +9,10 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/#services', label: 'Services' },
-  { href: '/quote', label: 'Quote' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/', label: 'Inicio' },
+  { href: '/#services', label: 'Servicios' },
+  { href: '/quote', label: 'Cotización' },
+  { href: '/contact', label: 'Contacto' },
 ];
 
 export function Header() {
@@ -44,7 +44,7 @@ export function Header() {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle navigation menu</span>
+                <span className="sr-only">Alternar menú de navegación</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right">

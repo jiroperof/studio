@@ -15,7 +15,7 @@ const EstimatePriceRangeInputSchema = z.object({
   serviceRequest: z
     .string()
     .describe(
-      'A detailed description of the requested IT services, including networking, computing, CCTV, alarm systems, or general IT support needs.'
+      'Una descripción detallada de los servicios de TI solicitados, incluidas las necesidades de redes, computación, CCTV, sistemas de alarma o soporte de TI general.'
     ),
 });
 export type EstimatePriceRangeInput = z.infer<typeof EstimatePriceRangeInputSchema>;
@@ -24,12 +24,12 @@ const EstimatePriceRangeOutputSchema = z.object({
   priceRange: z
     .string()
     .describe(
-      'An estimated price range for the requested services, based on the details provided in the service request.'
+      'Un rango de precios estimado para los servicios solicitados, basado en los detalles proporcionados en la solicitud de servicio.'
     ),
   confidenceLevel: z
     .string()
     .describe(
-      'A qualitative assessment of the confidence level in the estimated price range (e.g., Low, Medium, High).'    
+      'Una evaluación cualitativa del nivel de confianza en el rango de precios estimado (por ejemplo, Bajo, Medio, Alto).'    
     )
 });
 export type EstimatePriceRangeOutput = z.infer<typeof EstimatePriceRangeOutputSchema>;
@@ -44,16 +44,16 @@ const prompt = ai.definePrompt({
   name: 'estimatePriceRangePrompt',
   input: {schema: EstimatePriceRangeInputSchema},
   output: {schema: EstimatePriceRangeOutputSchema},
-  prompt: `You are an AI assistant specializing in estimating the price range for IT services provided by ICARO TECHNOLOGY.
+  prompt: `Eres un asistente de IA especializado en estimar el rango de precios para los servicios de TI proporcionados por ICARO TECHNOLOGY.
 
-  Based on the following service request, provide an estimated price range and a confidence level for that estimate.
+  Basado en la siguiente solicitud de servicio, proporciona un rango de precios estimado y un nivel de confianza para esa estimación.
 
-  Service Request: {{{serviceRequest}}}
+  Solicitud de Servicio: {{{serviceRequest}}}
 
-  Consider the complexity, scope, and potential resource requirements when determining the price range.
+  Considera la complejidad, el alcance y los posibles requisitos de recursos al determinar el rango de precios.
 
-  Output the price range as a string, including currency (e.g., "$500 - $1000").
-  Output the confidence level as one of "Low", "Medium", or "High".
+  Devuelve el rango de precios como una cadena, incluyendo la moneda (p. ej., "$500 - $1000").
+  Devuelve el nivel de confianza como uno de "Low", "Medium", o "High".
 `,
 });
 

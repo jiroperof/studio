@@ -12,7 +12,7 @@ export function Footer() {
             <span className="font-bold text-lg font-headline">ICARO TECHNOLOGY</span>
           </div>
           <p className="text-sm text-center md:text-left">
-            &copy; {new Date().getFullYear()} ICARO TECHNOLOGY. All rights reserved.
+            &copy; {new Date().getFullYear()} ICARO TECHNOLOGY. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-4">
             <Link href="#" aria-label="Twitter">
